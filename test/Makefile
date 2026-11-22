@@ -6,10 +6,10 @@ SIM ?= icarus
 FST ?= -fst # Use more efficient FST format
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = $(USER_PROJECT_ROOT)/src/anglelookup.v \
-                  $(USER_PROJECT_ROOT)/src/rotation.v \
-                  $(USER_PROJECT_ROOT)/src/top.v \
-                  $(USER_PROJECT_ROOT)/src/tt_um_cordic.v
+PROJECT_SOURCES = anglelookup.v \
+                  rotation.v \
+                  top.v \
+                  tt_um_cordic.v
 ifneq ($(GATES),yes)
 
 # RTL simulation:
