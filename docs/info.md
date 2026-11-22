@@ -31,7 +31,7 @@ The project can be tested by communicating with the ASIC through its GPIO pins;
 
 - Start the calculation: Set uio_in[3] high to initiate a calculation
 
- - Wait for completion: Select output channel 6 using uio_in[6:4] to read the busy status
+ - Wait for completion: Select "channel" 6 using uio_in[6:4] to 110 (binary 6) to read the busy status
    - A value of 1 means the calculation is in progress, while 0 means it has finished
 
  - Read the results: Use uio_in[6:4] to select the output:
