@@ -2,7 +2,7 @@ module top (
     input wire clk,
     input wire rst_n,
     input wire start,
-    input wire signed [16:0] angle;
+    input wire signed [16:0] angle,
     output wire signed [16:0] x_pos,
     output wire signed [16:0] y_pos,
     output wire [3:0] step,
