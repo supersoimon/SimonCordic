@@ -23,15 +23,16 @@ The project can be tested by communicating with the ASIC through its GPIO pins;
 
  - Set the angle: Write the 17-bit signed angle value using the ui_in pins. The angle is written in three 8-bit sections:
 
-   - uio_in[1:0] selects which byte to write.
+   - uio_in[1:0] selects which byte to write
 
-   - uio_in[2] acts as the write strobe.
+   - uio_in[2] acts as the write strobe
 
-   - ui_in[7:0] carries the byte being written.
+   - ui_in[7:0] carries the byte being written
 
-- Start the calculation: Set uio_in[3] high to initiate a calculation. The accelerator detects the rising edge of this signal.
+- Start the calculation: Set uio_in[3] high to initiate a calculation
 
- - Wait for completion: Select output channel 6 using uio_in[6:4] to read the busy status. A value of 1 means the calculation is in progress, while 0 means it has finished.
+ - Wait for completion: Select output channel 6 using uio_in[6:4] to read the busy status
+   - A value of 1 means the calculation is in progress, while 0 means it has finished
 
  - Read the results: Use uio_in[6:4] to select the output:
 
