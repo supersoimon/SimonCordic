@@ -53,4 +53,4 @@ The project can be tested by communicating with the ASIC through its GPIO pins;
 The three coordinate sections can be combined to reconstruct the signed 17-bit X and Y values.
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+No external hardware is required besides the Tiny Tapeout development board.
