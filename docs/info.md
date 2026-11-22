@@ -23,11 +23,11 @@ The project can be tested by communicating with the ASIC through its GPIO pins;
 
  - Set the angle: Write the 17-bit signed angle value using the ui_in pins. The angle is written in three 8-bit sections:
 
- - uio_in[1:0] selects which byte to write.
+   - uio_in[1:0] selects which byte to write.
 
- - uio_in[2] acts as the write strobe.
+   - uio_in[2] acts as the write strobe.
 
- - ui_in[7:0] carries the byte being written.
+   - ui_in[7:0] carries the byte being written.
 
 - Start the calculation: Set uio_in[3] high to initiate a calculation. The accelerator detects the rising edge of this signal.
 
@@ -35,17 +35,17 @@ The project can be tested by communicating with the ASIC through its GPIO pins;
 
  - Read the results: Use uio_in[6:4] to select the output:
 
- - 000: X coordinate bits [7:0]
+   - 000: X coordinate bits [7:0]
 
- - 001: X coordinate bits [15:8]
+   - 001: X coordinate bits [15:8]
 
- - 010: X coordinate bit [16]
+   - 010: X coordinate bit [16]
 
- - 011: Y coordinate bits [7:0]
+   - 011: Y coordinate bits [7:0]
 
- - 100: Y coordinate bits [15:8]
+   - 100: Y coordinate bits [15:8]
 
- - 101: Y coordinate bit [16]
+   - 101: Y coordinate bit [16]
 
  - 110: Busy status
 
